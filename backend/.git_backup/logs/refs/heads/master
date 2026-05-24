@@ -1,0 +1,8 @@
+0000000000000000000000000000000000000000 037d50730716c28bb7fa9206f9904fdafb37a891 Dukkadee Developer <developer@dukkadee.com> 1740875696 +0300	commit (initial): Initial commit for Dukkadee e-commerce platform with store import functionality, database migrations, and documentation
+037d50730716c28bb7fa9206f9904fdafb37a891 372ba323d58c0df774ecccec02d70408c2958ea5 Dukkadee Developer <developer@dukkadee.com> 1740885829 +0300	commit: Fix Phoenix 1.7 migration: Updated store_template components, fixed migration issues, implemented proper content_tag function
+372ba323d58c0df774ecccec02d70408c2958ea5 ee4a8601a06fbe75bdfce4b0b0dc3c79d90d8801 Dukkadee Developer <developer@dukkadee.com> 1740885969 +0300	commit: Updated documentation with Phoenix 1.7 migration guide and improvement suggestions
+ee4a8601a06fbe75bdfce4b0b0dc3c79d90d8801 fd266b58cf70b4d6f12074694dbf76120529139f Dukkadee Developer <developer@dukkadee.com> 1740888546 +0300	commit: Add complete menu for Inklessismore store with LiveView components for About, Gallery, and Contact pages
+fd266b58cf70b4d6f12074694dbf76120529139f 05dd697bec24a890bbb975a38500a48409f30292 Dukkadee Developer <developer@dukkadee.com> 1740936986 +0300	commit: Initial commit
+05dd697bec24a890bbb975a38500a48409f30292 dc65b3d2bae86df4ad1e43859c5f1e059ed41d35 Dukkadee Developer <developer@dukkadee.com> 1740954701 +0300	commit: çalışan kod
+dc65b3d2bae86df4ad1e43859c5f1e059ed41d35 1bc66cace8055d6c80cf88ef0431c3f1b52b8203 Dukkadee Developer <developer@dukkadee.com> 1740954759 +0300	commit: posgresql ile çalışıyor
+1bc66cace8055d6c80cf88ef0431c3f1b52b8203 546cec46c4bebd76bfc1280928b2795d71b2b3a5 Dukkadee Developer <developer@dukkadee.com> 1740956548 +0300	commit: Fix testimonials schema and add missing fields to database

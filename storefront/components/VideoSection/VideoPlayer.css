@@ -1,0 +1,25 @@
+.video-section {
+    padding: 4rem 0;
+    background-color: var(--background);
+    border-bottom: 1px solid var(--border);
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    /* 16:9 Aspect Ratio */
+    height: 0;
+    overflow: hidden;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-xl);
+    background: black;
+    border: 4px solid var(--surface);
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}

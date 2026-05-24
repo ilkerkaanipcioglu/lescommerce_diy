@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Lesstupid – Renkli Fırsatlar Dünyası</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    * { font-family: 'Inter', sans-serif; }
+    body {
+      background: linear-gradient(145deg, #F9F7FE 0%, #F1EFFA 100%);
+      min-height: 100vh;
+    }
+    /* Özel renk değişkenleri */
+    :root {
+      --medium-blue: #6050DC;
+      --majorelle: #9A90E9;
+      --tropical-indigo: #A9BA25; /* aslında yeşilimsi, ama acid green yakın */
+      --acid-green: #CCDC50;
+      --max-green-yellow: #DFE990;
+    }
+    /* Modern scroll */
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: #E0E1F5; border-radius: 10px; }
+    ::-webkit-scrollbar-thumb { background: var(--medium-blue); border-radius: 10px; }
+    /* Kart stilleri */
+    .les-card {
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(8px);
+      border-radius: 1.75rem;
+      border: 1px solid rgba(96, 80, 220, 0.2);
+      box-shadow: 0 12px 30px -10px rgba(0,0,0,0.08);
+      transition: all 0.25s ease;
+    }
+    .les-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 20px 35px -12px rgba(96, 80, 220, 0.2);
+      border-color: var(--medium-blue);
+    }
+    .btn-primary {
+      background: linear-gradient(95deg, var(--medium-blue), var(--majorelle));
+      transition: all 0.2s;
+      box-shadow: 0 6px 14px rgba(96, 80, 220, 0.25);
+    }
+    .btn-primary:hover {
+      transform: scale(1.02);
+      box-shadow: 0 10px 20px rgba(96, 80, 220, 0.35);
+      background: linear-gradient(95deg, #4E3EC9, #887DE0);
+    }
+    .btn-secondary {
+      background: linear-gradient(95deg, var(--acid-green), var(--max-green-yellow));
+      color: #2D3A1F;
+      font-weight: 600;
+      box-shadow: 0 4px 10px rgba(169, 186, 37, 0.2);
+    }
+    .btn-secondary:hover {
+      transform: scale(1.02);
+      background: linear-gradient(95deg, #BCCC40, #D2DE80);
+    }
+    .tag {
+      background: rgba(96, 80, 220, 0.12);
+      color: var(--medium-blue);
+      border-radius: 999px;
+      padding: 0.2rem 0.7rem;
+      font-size: 0.7rem;
+      font-weight: 600;
+      border: 0.5px solid rgba(96,80,220,0.3);
+    }
+    .gradient-text {
+      background: linear-gradient(135deg, var(--medium-blue), var(--majorelle));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    .toast-custom {
+      transition: opacity 0.3s ease;
+      animation: fadeUp 0.2s ease;
+    }
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translate(-50%, 20px); }
+      to { opacity: 1; transform: translate(-50%, 0); }
+    }
+  </style>
+</head>
+<body class="text-gray-800">
+
+  <!-- Header -->
+  <header class="sticky top-0 z-50 bg-white/70 backdrop-blur-md border-b border-[#6050DC]/20 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-3 flex justify-between items-center">
+      <div class="text-2xl sm:text-3xl font-black tracking-tighter">
+        <span class="gradient-text">LESSTUPID</span>
+      </div>
+      <div class="flex items-center gap-3">
+        <div class="hidden sm:flex text-xs bg-[#6050DC]/10 rounded-full px-3 py-1 items-center gap-1 text-[#6050DC] font-medium"><i class="fas fa-university"></i> Nairobi Uni</div>
+        <div class="w-9 h-9 rounded-full bg-gradient-to-tr from-[#6050DC] to-[#9A90E9] flex items-center justify-center text-white font-bold shadow-md">MW</div>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 py-8">
+
+    <!-- Profil kartı (Renkli) -->
+    <div class="les-card p-5 mb-8 flex flex-wrap justify-between items-center gap-4 bg-white/90">
+      <div class="flex items-center gap-4">
+        <div class="w-14 h-14 rounded-full bg-gradient-to-br from-[#6050DC] to-[#9A90E9] flex items-center justify-center text-white text-xl font-bold shadow-md">MW</div>
+        <div>
+          <h2 class="text-xl font-bold text-gray-800">Mia Wanjiku</h2>
+          <p class="text-gray-500 text-sm">Bilgisayar Müh. 3. sınıf • CV %88 • Aktif</p>
+          <div class="flex flex-wrap gap-2 mt-2">
+            <span class="tag">🤖 AI</span>
+            <span class="tag">📸 Mankenlik</span>
+            <span class="tag">🧵 DIY Gitar</span>
+            <span class="tag">💰 Satış</span>
+            <span class="tag">🎤 Influencer</span>
+          </div>
+        </div>
+      </div>
+      <div class="bg-[#F1EFFA] rounded-2xl px-4 py-2 text-center border border-[#6050DC]/20">
+        <i class="fas fa-star text-[#6050DC] text-xl"></i>
+        <span class="font-bold text-2xl ml-1 text-gray-800" id="pointsDisplay">680</span>
+        <p class="text-xs text-gray-500">Aktivite puanı</p>
+      </div>
+    </div>
+
+    <!-- Hızlı aksiyon butonları -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+      <button onclick="openSellModal()" class="btn-secondary py-3 rounded-xl flex items-center justify-center gap-2 transition"><i class="fas fa-store"></i> Ürün Satışı Ekle</button>
+      <button onclick="openDIYModal()" class="btn-primary py-3 rounded-xl flex items-center justify-center gap-2 transition text-white"><i class="fas fa-hammer"></i> DIY Projesi Başlat</button>
+    </div>
+
+    <!-- Günlük soru -->
+    <div class="les-card p-5 mb-8 flex flex-wrap justify-between items-center gap-4 bg-white/90">
+      <div>
+        <div class="flex items-center gap-2 mb-2"><i class="fas fa-question-circle text-[#6050DC]"></i><span class="font-semibold text-gray-700">Bugün ne yapmak istersin?</span></div>
+        <div class="flex flex-wrap gap-2">
+          <button onclick="addPoints(10)" class="bg-[#6050DC]/10 hover:bg-[#6050DC]/20 text-[#6050DC] text-xs px-3 py-1 rounded-full transition">Ürün sat</button>
+          <button onclick="addPoints(10)" class="bg-[#6050DC]/10 hover:bg-[#6050DC]/20 text-[#6050DC] text-xs px-3 py-1 rounded-full transition">DIY proje</button>
+          <button onclick="addPoints(10)" class="bg-[#6050DC]/10 hover:bg-[#6050DC]/20 text-[#6050DC] text-xs px-3 py-1 rounded-full transition">Affiliate</button>
+          <button onclick="addPoints(10)" class="bg-[#6050DC]/10 hover:bg-[#6050DC]/20 text-[#6050DC] text-xs px-3 py-1 rounded-full transition">Parti</button>
+          <button onclick="addPoints(10)" class="bg-[#6050DC]/10 hover:bg-[#6050DC]/20 text-[#6050DC] text-xs px-3 py-1 rounded-full transition">Güzellik yarışması</button>
+        </div>
+      </div>
+      <div class="text-sm text-[#6050DC] font-medium"><i class="fas fa-coins"></i> Her cevap +10 puan</div>
+    </div>
+
+    <!-- Fırsatlar akışı -->
+    <div class="flex justify-between items-center mb-5">
+      <h2 class="text-2xl font-bold flex items-center gap-2 text-gray-800"><i class="fas fa-magic text-[#6050DC]"></i> Sana özel fırsatlar</h2>
+      <span class="text-xs bg-[#6050DC]/10 text-[#6050DC] px-3 py-1 rounded-full">Canlı akış</span>
+    </div>
+
+    <div id="opportunitiesContainer" class="space-y-5 mb-10"></div>
+
+    <!-- Puan kullanım kartı -->
+    <div class="les-card p-5 mb-8 flex flex-wrap justify-between items-center gap-4 bg-white/90">
+      <div><i class="fas fa-gem text-[#6050DC] text-2xl mr-2"></i> <span class="font-semibold text-gray-800">Puanlarını kullan, öne çık!</span><p class="text-sm text-gray-500 mt-1">50 puan = öncelikli başvuru / öne çıkan ürün / sponsor görüşmesi</p></div>
+      <button onclick="usePriority()" class="btn-primary text-white px-5 py-2 rounded-xl font-medium">Puan Kullan</button>
+    </div>
+
+    <!-- Footer not -->
+    <div class="text-center text-gray-400 text-xs border-t border-[#6050DC]/20 pt-6 mt-4">
+      <i class="fas fa-infinity text-[#6050DC] mr-1"></i> Sınırsız, tarafsız, her şey dahil. Lesstupid sadece eşleştirir.
+    </div>
+  </main>
+
+  <!-- Modallar (renk uyumlu) -->
+  <div id="sellModal" class="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-50 hidden transition-all">
+    <div class="bg-white rounded-2xl max-w-md w-full p-6 mx-4 shadow-2xl border border-[#6050DC]/30">
+      <h3 class="text-xl font-bold text-gray-800 mb-3">Yeni ürün satışa ekle</h3>
+      <input type="text" id="productName" placeholder="Ürün adı" class="w-full border border-gray-300 rounded-xl p-2 mb-2 focus:outline-none focus:border-[#6050DC]">
+      <input type="text" id="productPrice" placeholder="Fiyat (KES veya $)" class="w-full border border-gray-300 rounded-xl p-2 mb-2 focus:outline-none focus:border-[#6050DC]">
+      <textarea id="productDesc" rows="2" placeholder="Açıklama" class="w-full border border-gray-300 rounded-xl p-2 mb-3 focus:outline-none focus:border-[#6050DC]"></textarea>
+      <div class="flex justify-end gap-3">
+        <button onclick="closeSellModal()" class="px-4 py-2 bg-gray-200 rounded-xl hover:bg-gray-300">İptal</button>
+        <button onclick="addProduct()" class="bg-[#A9BA25] text-gray-800 px-4 py-2 rounded-xl font-semibold">Satışa ekle</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="diyModal" class="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-50 hidden">
+    <div class="bg-white rounded-2xl max-w-md w-full p-6 mx-4 shadow-2xl border border-[#6050DC]/30">
+      <h3 class="text-xl font-bold text-gray-800 mb-3">Kendin Yap (DIY) Projesi Başlat</h3>
+      <select id="diyType" class="w-full border border-gray-300 rounded-xl p-2 mb-3 focus:outline-none focus:border-[#6050DC]">
+        <option>El yapımı gitar</option>
+        <option>Takı tasarımı</option>
+        <option>Mobilya</option>
+        <option>Deri cüzdan</option>
+        <option>Seramik</option>
+      </select>
+      <p class="text-sm text-gray-500 mb-3">Adım adım malzeme, usta ve kılavuz önereceğiz.</p>
+      <div class="flex justify-end gap-3">
+        <button onclick="closeDIYModal()" class="px-4 py-2 bg-gray-200 rounded-xl hover:bg-gray-300">İptal</button>
+        <button onclick="startDIY()" class="btn-primary text-white px-4 py-2 rounded-xl">Projeyi başlat</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="applyModal" class="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-50 hidden">
+    <div class="bg-white rounded-2xl max-w-md w-full p-6 mx-4 shadow-2xl border border-[#6050DC]/30">
+      <h3 class="text-xl font-bold mb-2 text-gray-800">Başvuru / Katılım</h3>
+      <p id="applyTitle" class="text-gray-700 mb-3"></p>
+      <p class="text-sm text-gray-500 mb-4">Lesstupid üzerinden başvurun iletilecek. Fırsat sahibine yönlendirileceksin.</p>
+      <div class="flex justify-end gap-3">
+        <button onclick="closeApplyModal()" class="px-4 py-2 bg-gray-200 rounded-xl hover:bg-gray-300">İptal</button>
+        <button onclick="submitApplication()" class="btn-primary text-white px-4 py-2 rounded-xl">Devam</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    let currentPoints = 680;
+    let pendingOpportunity = null;
+
+    let opportunities = [
+      { title: "El Yapımı Gitar DIY Projesi – Malzeme + Usta Desteği", source: "Lesstupid Maker", match: 96, reward: "Tamamlama bonusu 500 KES", tags: "diy,gitar,el işi", desc: "Adım adım kılavuz, malzeme satın al, usta ile çalış veya kendin yap." },
+      { title: "Affiliate – TikTok Ürün Tanıtımı (Komisyon %20)", source: "Partner Program", match: 91, reward: "%20 komisyon", tags: "affiliate,sosyal medya", desc: "Marka ürünlerini paylaş, satış başına kazan." },
+      { title: "Güzellik Yarışması – Miss Nairobi Uni 2026", source: "Yarışma Komitesi", match: 88, reward: "5000$ + plaket", tags: "güzellik,yarışma", desc: "Ön eleme stüdyo çekimi." },
+      { title: "Kendi Ürününü Sat – El Yapımı Takı", source: "Lesstupid Pazar", match: 85, reward: "Satıştan %90", tags: "satış,el işi", desc: "Listele ve sat, alıcıyla buluş." },
+      { title: "Parti Organizasyon Asistanı – Gece Kulübü", source: "Eventbrite", match: 82, reward: "2000 KES + giriş", tags: "parti,gece", desc: "Misafir karşılama, DJ yardımı." },
+      { title: "Influencer – Instagram Reels (Spor Giyim)", source: "Brand Collab", match: 90, reward: "8000 KES + ürün", tags: "influencer", desc: "3 reel, 2 post." },
+      { title: "OnlyFans İçerik Üreticisi (Yetişkin)", source: "AdultWork", match: 76, reward: "Gelir %80", tags: "yetişkin", desc: "Esnek saatler." },
+      { title: "Cami Gençlik Koordinatörü (Dini Hizmet)", source: "Yerel Vakıf", match: 73, reward: "Gönüllü + yemek", tags: "din", desc: "Gençlere yönelik etkinlikler." },
+      { title: "Online İngilizce Öğretmeni (Preply)", source: "Preply", match: 93, reward: "$16/saat", tags: "eğitim", desc: "Çocuklar ve yetişkinler." },
+      { title: "Yazılım Stajyeri (Backend)", source: "LinkedIn", match: 95, reward: "Ücretli staj", tags: "staj", desc: "3 ay hibrit." },
+      { title: "AI Trainer – Veri Etiketleme", source: "Remotasks", match: 90, reward: "$13/saat", tags: "ai", desc: "Esnek uzaktan." }
+    ];
+
+    function renderOpportunities() {
+      const container = document.getElementById('opportunitiesContainer');
+      if (!container) return;
+      container.innerHTML = opportunities.map(opp => `
+        <div class="les-card p-5 transition-all bg-white/90">
+          <div class="flex flex-wrap justify-between items-start gap-3">
+            <div class="flex-1">
+              <h3 class="text-xl font-bold text-gray-800">${opp.title}</h3>
+              <div class="flex items-center gap-2 mt-1 text-sm text-gray-500"><i class="fas fa-globe"></i> ${opp.source}</div>
+              <p class="text-gray-600 text-sm mt-2">${opp.desc}</p>
+              <div class="flex flex-wrap gap-2 mt-3">
+                ${opp.tags.split(',').map(t => `<span class="tag">#${t.trim()}</span>`).join('')}
+              </div>
+            </div>
+            <div class="text-right">
+              <span class="bg-[#CCDC50]/20 text-[#5C6B12] text-xs px-2 py-1 rounded-full font-semibold">${opp.match}% uyum</span>
+              <p class="text-[#6050DC] font-bold text-sm mt-1">${opp.reward}</p>
+            </div>
+          </div>
+          <div class="mt-4 flex justify-end">
+            <button onclick='openApplyModal("${opp.title.replace(/'/g, "\\'")}", "${opp.source.replace(/'/g, "\\'")}")' class="btn-primary text-white px-5 py-2 rounded-xl text-sm font-medium">İncele & Katıl</button>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    function addPoints(p) {
+      currentPoints += p;
+      document.getElementById('pointsDisplay').innerText = currentPoints;
+      toastMsg(`+${p} puan kazandın! Toplam: ${currentPoints}`);
+    }
+
+    function openSellModal() { document.getElementById('sellModal').classList.remove('hidden'); }
+    function closeSellModal() { document.getElementById('sellModal').classList.add('hidden'); }
+    function addProduct() {
+      let name = document.getElementById('productName').value.trim();
+      let price = document.getElementById('productPrice').value.trim();
+      let desc = document.getElementById('productDesc').value.trim();
+      if (!name || !price) { toastMsg("Ürün adı ve fiyat gerekli."); return; }
+      opportunities.unshift({
+        title: `${name} (Satılık)`,
+        source: "Lesstupid Satış",
+        match: 95,
+        reward: price,
+        tags: "satış,kullanıcı ürünü",
+        desc: desc || "Bu ürün satışa sunulmuştur."
+      });
+      renderOpportunities();
+      closeSellModal();
+      toastMsg(`"${name}" satışa eklendi.`);
+      document.getElementById('productName').value = '';
+      document.getElementById('productPrice').value = '';
+      document.getElementById('productDesc').value = '';
+    }
+
+    function openDIYModal() { document.getElementById('diyModal').classList.remove('hidden'); }
+    function closeDIYModal() { document.getElementById('diyModal').classList.add('hidden'); }
+    function startDIY() {
+      let type = document.getElementById('diyType').value;
+      opportunities.unshift({
+        title: `DIY Projesi: ${type}`,
+        source: "Lesstupid Maker",
+        match: 98,
+        reward: "Starter kit + usta eşleşme",
+        tags: "diy,proje,el işi",
+        desc: `${type} yapmak için adım adım rehber, malzeme önerileri, isteğe bağlı usta desteği.`
+      });
+      renderOpportunities();
+      closeDIYModal();
+      toastMsg(`${type} DIY projen başlatıldı!`);
+    }
+
+    function openApplyModal(title, source) {
+      pendingOpportunity = { title, source };
+      document.getElementById('applyTitle').innerHTML = `<strong>${title}</strong> (${source})`;
+      document.getElementById('applyModal').classList.remove('hidden');
+    }
+    function closeApplyModal() { document.getElementById('applyModal').classList.add('hidden'); pendingOpportunity = null; }
+    function submitApplication() {
+      if (pendingOpportunity) {
+        toastMsg(`"${pendingOpportunity.title}" için başvurun iletildi.`);
+        closeApplyModal();
+        setTimeout(() => toastMsg(`Yönlendirme: ${pendingOpportunity.source}`), 1500);
+      }
+    }
+    function usePriority() {
+      if (currentPoints >= 50) {
+        currentPoints -= 50;
+        document.getElementById('pointsDisplay').innerText = currentPoints;
+        toastMsg(`50 puan harcandı. Öncelikli başvuru hakkın aktif.`);
+      } else {
+        toastMsg("Yetersiz puan! Daha fazla aktivite yap.");
+      }
+    }
+    function toastMsg(msg) {
+      let existing = document.querySelector('.toast-custom');
+      if (existing) existing.remove();
+      let div = document.createElement('div');
+      div.className = 'toast-custom fixed bottom-5 left-1/2 transform -translate-x-1/2 bg-white/90 backdrop-blur-md border border-[#6050DC]/30 text-gray-800 px-5 py-3 rounded-2xl shadow-2xl text-sm z-50 font-medium';
+      div.innerHTML = `<i class="fas fa-check-circle text-[#6050DC] mr-2"></i>${msg}`;
+      document.body.appendChild(div);
+      setTimeout(() => { div.style.opacity = '0'; setTimeout(() => div.remove(), 2500); }, 2500);
+    }
+
+    renderOpportunities();
+  </script>
+</body>
+</html>
